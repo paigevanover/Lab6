@@ -21,6 +21,17 @@ def encode(password):
         encoded_password  += str(pass_list[i])
     return  encoded_password
 
+def decode(encoded_password):
+    lista = []
+    for i in range(0, len(encoded_password)):
+        lista.append(int(encoded_password[i]))
+    for i in range(0, len(encoded_password)):
+        lista[i] = int(lista[i]) - 3
+    decoded_passw = ''
+    for i in range(0, len(lista)):
+        decoded_passw += str(lista[i])
+
+    print('The encoded password is', encoded_password + ', and the original password is', decoded_passw + '.')
 
 
 
